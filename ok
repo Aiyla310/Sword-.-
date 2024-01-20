@@ -1484,7 +1484,7 @@ document.onkeydown = function(e) {
     } else if(e.key == "3" && window.aimhelperkey) {
         CheatAPI.PLAYERS.forEach((player)=>{
             if(player.WOID != CheatAPI.PLAYER.WOID)
-                CheatAPI.CHEATS.SET_SIZE(player.WOID, 9, "SERVER")
+                CheatAPI.CHEATS.SET_SIZE(player.WOID, 15, "SERVER")
         })
     } else if(e.key == "4" && window.aimhelperkey) {
         CheatAPI.PLAYERS.forEach((player)=>{
