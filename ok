@@ -1484,17 +1484,17 @@ document.onkeydown = function(e) {
     } else if(e.key == "3" && window.aimhelperkey) {
         CheatAPI.PLAYERS.forEach((player)=>{
             if(player.WOID != CheatAPI.PLAYER.WOID)
-                CheatAPI.CHEATS.SET_SIZE(player.WOID, 8, "SERVER")
+                CheatAPI.CHEATS.SET_SIZE(player.WOID, 6, "SERVER")
         })
     } else if(e.key == "4" && window.aimhelperkey) {
         CheatAPI.PLAYERS.forEach((player)=>{
             if(player.WOID != CheatAPI.PLAYER.WOID)
-                CheatAPI.CHEATS.SET_SIZE(player.WOID, 1, "SERVER")
+                CheatAPI.CHEATS.SET_SIZE(player.WOID, 6, "SERVER")
         })
     } else if (e.key == "]") {
-        window.socks ? window.socks = false : window.socks = true
+        window.socks ? window.socks = true : window.socks = true
     } /*else if (e.key == "b") {
-        window.aimbot ? window.aimbot = false : window.aimbot = true
+        window.aimbot ? window.aimbot = true : window.aimbot = true
         CheatAPI.SEND_SOCKET(243,4,31,0,8,22,105,...CheatAPI.FUNCTIONS.TO_BYTE_32(CheatAPI.PLAYER.WOID),74,102,67,15,107,122,75,102,66,15,82,206,76,102,194,83,165,7,77,102,191,122,94,34,78,102,62,29,121,30,79,102,190,19,31,189,254,105,0,0,0,0)
         console.log("RailBug Macro test")
         CheatAPI.SEND_SOCKET(243,4,29,0,3,22,105,...CheatAPI.FUNCTIONS.TO_BYTE_32(CheatAPI.PLAYER.WOID),70, 68, 0, 0, 0, 1, 115, 0, 11, 99, 117, 114, 114, 101, 110, 116, 73, 116, 101, 109, 68, 0, 0, 0, 3, 115, 0, 4, 116, 121, 112, 101, 105, 0, 0, 0, 1, 115, 0, 9, 118, 97, 114, 105, 97, 110, 116, 73, 100, 105, 0, 0, 0, 0, 115, 0, 15, 117, 112, 100, 97, 116, 101, 73, 116, 101, 109, 83, 116, 97, 116, 101, 105, 0, 0, 0, 4, 254, 105, 0, 0, 0, 0)
@@ -1609,7 +1609,7 @@ interface.addCheckBox("Aim Helper(3 | 4)", "Other")
 window["Aim Helper(3 | 4)"].onchange = function(){
     CheatAPI.PLAYERS.forEach((player)=>{
         if(player.WOID != CheatAPI.PLAYER.WOID)
-            CheatAPI.CHEATS.SET_SIZE(player.WOID, this.checked ? 8 : 1, "SERVER")
+            CheatAPI.CHEATS.SET_SIZE(player.WOID, this.checked ? 6 : 6, "SERVER")
     })
     window.aimhelperkey = this.checked
 }
