@@ -1609,7 +1609,7 @@ interface.addCheckBox("Aim Helper(3 | 4)", "Other")
 window["Aim Helper(3 | 4)"].onchange = function(){
     CheatAPI.PLAYERS.forEach((player)=>{
         if(player.WOID != CheatAPI.PLAYER.WOID)
-            CheatAPI.CHEATS.SET_SIZE(player.WOID, this.checked ? 9 : 1, "SERVER")
+            CheatAPI.CHEATS.SET_SIZE(player.WOID, this.checked ? 7 : 1, "SERVER")
     })
     window.aimhelperkey = this.checked
 }
